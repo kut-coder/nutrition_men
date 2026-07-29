@@ -28,7 +28,15 @@
   <main id="top">
     <!-- Первый экран -->
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2400&q=80"
+          alt=""
+          width="2400"
+          height="1600"
+        >
+        <div class="hero-media-overlay"></div>
+      </div>
       <div class="container hero-inner">
         <div class="hero-content">
           <h1 class="hero-title">
@@ -40,43 +48,6 @@
           </p>
           <a href="#final" class="btn btn-primary">Получить персональный план питания</a>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-panel">
-            <div class="gauge-ring">
-              <svg viewBox="0 0 280 280" class="gauge-svg">
-                <circle class="gauge-track" cx="140" cy="140" r="118" />
-                <circle class="gauge-progress" cx="140" cy="140" r="118" />
-                <circle class="gauge-accent" cx="140" cy="140" r="98" />
-              </svg>
-              <div class="gauge-core">
-                <span class="gauge-label">SYSTEM</span>
-                <span class="gauge-value">OK</span>
-                <span class="gauge-unit">обслуживание</span>
-              </div>
-            </div>
-            <div class="visual-lines">
-              <div class="line-item">
-                <span class="line-dot"></span>
-                <span class="line-bar"></span>
-                <span class="line-text">Энергия</span>
-              </div>
-              <div class="line-item">
-                <span class="line-dot"></span>
-                <span class="line-bar mid"></span>
-                <span class="line-text">Режим</span>
-              </div>
-              <div class="line-item">
-                <span class="line-dot"></span>
-                <span class="line-bar long"></span>
-                <span class="line-text">Питание</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span></span>
       </div>
     </section>
 
@@ -109,27 +80,15 @@
             Моя задача — создать систему питания, которую вы сможете поддерживать долго.
           </p>
         </div>
-        <div class="system-diagram" aria-hidden="true">
-          <div class="diagram-frame">
-            <div class="diagram-row">
-              <span class="diagram-label">Привычки</span>
-              <span class="diagram-track"><i style="--w: 78%"></i></span>
-            </div>
-            <div class="diagram-row">
-              <span class="diagram-label">График</span>
-              <span class="diagram-track"><i style="--w: 64%"></i></span>
-            </div>
-            <div class="diagram-row">
-              <span class="diagram-label">Вкус</span>
-              <span class="diagram-track"><i style="--w: 86%"></i></span>
-            </div>
-            <div class="diagram-row">
-              <span class="diagram-label">Цель</span>
-              <span class="diagram-track"><i style="--w: 92%"></i></span>
-            </div>
-            <p class="diagram-caption">Параметры системы · индивидуальная калибровка</p>
-          </div>
-        </div>
+        <figure class="split-photo">
+          <img
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=80"
+            alt="Премиальный автомобиль — символ точного и регулярного обслуживания"
+            width="1400"
+            height="1750"
+            loading="lazy"
+          >
+        </figure>
       </div>
     </section>
 
@@ -168,36 +127,27 @@
 
     <!-- Блок 5 -->
     <section class="section section-process" id="process">
-      <div class="container">
+      <div class="container process-layout">
         <div class="section-head">
           <p class="section-index">04</p>
           <h2 class="section-title">Как проходит работа</h2>
         </div>
         <ol class="process-list">
           <li class="process-step">
-            <div class="process-marker">
-              <span>Шаг 1</span>
-              <i></i>
-            </div>
+            <span class="process-marker">Шаг 1</span>
             <div class="process-body">
               <h3>Заполняете подробную анкету</h3>
               <p>Рассказываете об образе жизни, режиме дня, привычках, предпочтениях и целях.</p>
             </div>
           </li>
           <li class="process-step">
-            <div class="process-marker">
-              <span>Шаг 2</span>
-              <i></i>
-            </div>
+            <span class="process-marker">Шаг 2</span>
             <div class="process-body">
               <h3>Я составляю персональную программу питания</h3>
             </div>
           </li>
           <li class="process-step">
-            <div class="process-marker">
-              <span>Шаг 3</span>
-              <i></i>
-            </div>
+            <span class="process-marker">Шаг 3</span>
             <div class="process-body">
               <h3>Индивидуальное сопровождение на протяжении прохождения программы питания</h3>
               <ul>
@@ -209,6 +159,17 @@
           </li>
         </ol>
       </div>
+    </section>
+
+    <!-- Фото-разрыв -->
+    <section class="photo-break" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=2400&q=80"
+        alt=""
+        width="2400"
+        height="1200"
+        loading="lazy"
+      >
     </section>
 
     <!-- Блок 6 -->
@@ -306,19 +267,39 @@
 
     <!-- Блок 7 -->
     <section class="section section-about" id="about">
-      <div class="container narrow">
-        <p class="section-index">06</p>
-        <h2 class="section-title">Обо мне</h2>
-        <p class="about-text">
-          Для меня важно не просто составить программу питания.
-          Важно подобрать питание, которое будет работать именно в вашей жизни.
-        </p>
+      <div class="container about-layout">
+        <figure class="about-photo">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+            alt="Детали премиального автомобиля — внимание к сложному механизму"
+            width="1200"
+            height="1500"
+            loading="lazy"
+          >
+        </figure>
+        <div class="about-copy">
+          <p class="section-index">06</p>
+          <h2 class="section-title">Обо мне</h2>
+          <p class="about-text">
+            Для меня важно не просто составить программу питания.
+            Важно подобрать питание, которое будет работать именно в вашей жизни.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Финальный блок -->
     <section class="section section-final" id="final">
-      <div class="final-bg" aria-hidden="true"></div>
+      <div class="final-media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=2400&q=80"
+          alt=""
+          width="2400"
+          height="1400"
+          loading="lazy"
+        >
+        <div class="final-media-overlay"></div>
+      </div>
       <div class="container narrow final-inner">
         <p class="section-index light">07</p>
         <h2 class="section-title light">Регулярное обслуживание всегда обходится дешевле ремонта.</h2>
