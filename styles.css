@@ -506,6 +506,10 @@ button {
   padding-bottom: 9rem;
 }
 
+.section-insight .section-title {
+  max-width: none;
+}
+
 .insight__frame {
   display: flex;
   align-items: center;
@@ -554,7 +558,7 @@ button {
   font-size: 1.05rem !important;
   line-height: 1.7 !important;
   color: var(--text-muted) !important;
-  max-width: 40ch;
+  max-width: none;
 }
 
 /* --- System --- */
@@ -652,6 +656,11 @@ button {
   background: var(--graphite);
 }
 
+.section-result .section-title,
+.section-result .section-lead {
+  max-width: none;
+}
+
 .result-list {
   max-width: 820px;
   border-top: 1px solid var(--border);
@@ -701,6 +710,10 @@ button {
 
 .section-process {
   background: var(--graphite-deep);
+}
+
+.section-process .section-title {
+  max-width: none;
 }
 
 .process__layout {
@@ -792,6 +805,10 @@ button {
 
 .section-program {
   background: var(--graphite);
+}
+
+.section-program .section-title {
+  max-width: none;
 }
 
 .program-showcase {
