@@ -11,97 +11,99 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a href="#top" class="logo" aria-label="Вектор — на главную">Вектор</a>
-      <nav class="nav" aria-label="Основная навигация">
+
+      <nav class="nav" id="primary-nav" aria-label="Основная навигация">
         <a href="#system">Система</a>
         <a href="#result">Результат</a>
         <a href="#process">Работа</a>
         <a href="#program">Программа</a>
         <a href="#about">Обо мне</a>
       </nav>
-      <a href="#final" class="header-cta">Получить план</a>
+
+      <div class="header-actions">
+        <a href="#final" class="header-cta">Получить план</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Открыть меню"
+        >
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- Первый экран -->
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 class="hero-title">
+    <!-- 1. Первый экран -->
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="technical-label" aria-hidden="true">SYSTEM / NUTRITION</p>
+          <h1 class="hero__title" id="hero-title">
             Организм работает для вас каждый день.<br>
             Позаботьтесь о его обслуживании так же, как заботитесь о своем автомобиле.
           </h1>
-          <p class="hero-subtitle">
+          <p class="hero__subtitle">
             Персональная система питания для стабильной работы организма — поддержит энергию, поможет двигаться к комфортному весу и станет естественной частью вашей жизни.
           </p>
           <a href="#final" class="btn btn-primary">Получить персональный план питания</a>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-panel">
-            <div class="gauge-ring">
-              <svg viewBox="0 0 280 280" class="gauge-svg">
-                <circle class="gauge-track" cx="140" cy="140" r="118" />
-                <circle class="gauge-progress" cx="140" cy="140" r="118" />
-                <circle class="gauge-accent" cx="140" cy="140" r="98" />
-              </svg>
-              <div class="gauge-core">
-                <span class="gauge-label">SYSTEM</span>
-                <span class="gauge-value">OK</span>
-                <span class="gauge-unit">обслуживание</span>
-              </div>
-            </div>
-            <div class="visual-lines">
-              <div class="line-item">
-                <span class="line-dot"></span>
-                <span class="line-bar"></span>
-                <span class="line-text">Энергия</span>
-              </div>
-              <div class="line-item">
-                <span class="line-dot"></span>
-                <span class="line-bar mid"></span>
-                <span class="line-text">Режим</span>
-              </div>
-              <div class="line-item">
-                <span class="line-dot"></span>
-                <span class="line-bar long"></span>
-                <span class="line-text">Питание</span>
-              </div>
-            </div>
+        <div class="hero__media">
+          <!-- Позднее заменить на <img alt="..."> -->
+          <div class="image-placeholder hero-image" data-image-id="image-01" aria-hidden="true">
+            <div class="image-placeholder__grid"></div>
+            <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 01</span>
+            <span class="image-placeholder__description">
+              Крупный фрагмент сложного механизма и рука специалиста во время обслуживания
+            </span>
+          </div>
+
+          <div class="hero__marks" aria-hidden="true">
+            <span class="technical-label">VEC-01</span>
+            <span class="technical-label">REGULAR MAINTENANCE</span>
+            <span class="technical-line technical-line--h"></span>
+            <span class="service-mark">A1</span>
           </div>
         </div>
       </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span></span>
-      </div>
     </section>
 
-    <!-- Блок 2 -->
-    <section class="section section-insight" id="insight">
+    <!-- 2. Исправная система -->
+    <section class="section section-insight" id="insight" aria-labelledby="insight-title">
       <div class="container narrow">
-        <p class="section-index">01</p>
-        <h2 class="section-title">Исправная система требует регулярного обслуживания</h2>
-        <div class="insight-text">
+        <div class="insight__frame" aria-hidden="true">
+          <span class="section-index">01</span>
+          <span class="technical-label">SERVICE NOTE</span>
+        </div>
+        <h2 class="section-title" id="insight-title">Исправная система требует регулярного обслуживания</h2>
+        <div class="insight__text">
           <p>Мы обслуживаем автомобиль.</p>
           <p>Следим за домом.</p>
           <p>Решаем рабочие вопросы.</p>
           <p>Заботимся о семье.</p>
-          <p class="insight-pause">Но собственный организм часто оказывается в конце списка.</p>
-          <p>Пока не начинает напоминать о себе усталостью, нехваткой энергии или изменениями в самочувствии.</p>
+          <p class="insight__pause">
+            <span class="service-mark" aria-hidden="true"></span>
+            Но собственный организм часто оказывается в конце списка.
+          </p>
+          <p class="insight__closing">Пока не начинает напоминать о себе усталостью, нехваткой энергии или изменениями в самочувствии.</p>
         </div>
       </div>
     </section>
 
-    <!-- Блок 3 -->
-    <section class="section section-system" id="system">
-      <div class="container split">
-        <div class="split-copy">
+    <!-- 3. Система питания -->
+    <section class="section section-system" id="system" aria-labelledby="system-title">
+      <div class="container system__layout">
+        <div class="system__copy">
           <p class="section-index">02</p>
-          <h2 class="section-title">Система питания, рассчитанная на долгую дистанцию</h2>
+          <h2 class="section-title" id="system-title">Система питания, рассчитанная на долгую дистанцию</h2>
           <p class="section-text">
             «Вектор» — это персональная система питания, которая учитывает привычки, рабочий график и вкусовые предпочтения.
           </p>
@@ -109,226 +111,314 @@
             Моя задача — создать систему питания, которую вы сможете поддерживать долго.
           </p>
         </div>
-        <div class="system-diagram" aria-hidden="true">
-          <div class="diagram-frame">
-            <div class="diagram-row">
-              <span class="diagram-label">Привычки</span>
-              <span class="diagram-track"><i style="--w: 78%"></i></span>
-            </div>
-            <div class="diagram-row">
-              <span class="diagram-label">График</span>
-              <span class="diagram-track"><i style="--w: 64%"></i></span>
-            </div>
-            <div class="diagram-row">
-              <span class="diagram-label">Вкус</span>
-              <span class="diagram-track"><i style="--w: 86%"></i></span>
-            </div>
-            <div class="diagram-row">
-              <span class="diagram-label">Цель</span>
-              <span class="diagram-track"><i style="--w: 92%"></i></span>
-            </div>
-            <p class="diagram-caption">Параметры системы · индивидуальная калибровка</p>
+
+        <div class="system__side">
+          <!-- Позднее заменить на <img alt="..."> -->
+          <div class="image-placeholder system-image" data-image-id="image-02" aria-hidden="true">
+            <div class="image-placeholder__grid"></div>
+            <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 02</span>
+            <span class="image-placeholder__description">
+              Рабочая поверхность специалиста: документ, точный инструмент, металл и рука человека
+            </span>
           </div>
+
+          <aside class="config-sheet" aria-label="Персональная конфигурация">
+            <header class="config-sheet__header">
+              <span class="technical-label">PERSONAL CONFIGURATION</span>
+              <span class="config-sheet__title">Персональная конфигурация</span>
+            </header>
+            <ul class="config-sheet__list">
+              <li>
+                <span class="config-sheet__param">Привычки</span>
+                <span class="config-sheet__track" aria-hidden="true"><i></i></span>
+                <span class="service-mark">01</span>
+              </li>
+              <li>
+                <span class="config-sheet__param">График</span>
+                <span class="config-sheet__track" aria-hidden="true"><i></i></span>
+                <span class="service-mark">02</span>
+              </li>
+              <li>
+                <span class="config-sheet__param">Вкусовые предпочтения</span>
+                <span class="config-sheet__track" aria-hidden="true"><i></i></span>
+                <span class="service-mark">03</span>
+              </li>
+              <li>
+                <span class="config-sheet__param">Цель</span>
+                <span class="config-sheet__track" aria-hidden="true"><i></i></span>
+                <span class="service-mark">04</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- Блок 4 -->
-    <section class="section section-result" id="result">
+    <!-- 4. Что вы получите -->
+    <section class="section section-result" id="result" aria-labelledby="result-title">
       <div class="container">
         <div class="section-head">
           <p class="section-index">03</p>
-          <h2 class="section-title">Что вы получите</h2>
+          <h2 class="section-title" id="result-title">Что вы получите</h2>
           <p class="section-lead">Готовое персональное меню, которое помогает:</p>
         </div>
         <ul class="result-list">
           <li>
-            <span class="result-num">01</span>
-            <span class="result-text">поддерживать энергию в течение дня</span>
+            <span class="result-list__rail" aria-hidden="true"></span>
+            <span class="result-list__num">01</span>
+            <span class="result-list__text">поддерживать энергию в течение дня</span>
           </li>
           <li>
-            <span class="result-num">02</span>
-            <span class="result-text">двигаться к комфортному весу</span>
+            <span class="result-list__rail" aria-hidden="true"></span>
+            <span class="result-list__num">02</span>
+            <span class="result-list__text">двигаться к комфортному весу</span>
           </li>
           <li>
-            <span class="result-num">03</span>
-            <span class="result-text">чувствовать лёгкость</span>
+            <span class="result-list__rail" aria-hidden="true"></span>
+            <span class="result-list__num">03</span>
+            <span class="result-list__text">чувствовать лёгкость</span>
           </li>
           <li>
-            <span class="result-num">04</span>
-            <span class="result-text">питаться полноценно и разнообразно</span>
+            <span class="result-list__rail" aria-hidden="true"></span>
+            <span class="result-list__num">04</span>
+            <span class="result-list__text">питаться полноценно и разнообразно</span>
           </li>
           <li>
-            <span class="result-num">05</span>
-            <span class="result-text">постепенно формировать устойчивые привычки</span>
+            <span class="result-list__rail" aria-hidden="true"></span>
+            <span class="result-list__num">05</span>
+            <span class="result-list__text">постепенно формировать устойчивые привычки</span>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Блок 5 -->
-    <section class="section section-process" id="process">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-index">04</p>
-          <h2 class="section-title">Как проходит работа</h2>
+    <!-- 5. Как проходит работа -->
+    <section class="section section-process" id="process" aria-labelledby="process-title">
+      <div class="container process__layout">
+        <div class="process__main">
+          <div class="section-head">
+            <p class="section-index">04</p>
+            <h2 class="section-title" id="process-title">Как проходит работа</h2>
+          </div>
+          <ol class="process-list">
+            <li class="process-step">
+              <div class="process-step__marker">
+                <span class="service-mark">Шаг 1</span>
+                <span class="technical-line technical-line--v" aria-hidden="true"></span>
+              </div>
+              <div class="process-step__body">
+                <h3>Заполняете подробную анкету</h3>
+                <p>Рассказываете об образе жизни, режиме дня, привычках, предпочтениях и целях.</p>
+              </div>
+            </li>
+            <li class="process-step">
+              <div class="process-step__marker">
+                <span class="service-mark">Шаг 2</span>
+                <span class="technical-line technical-line--v" aria-hidden="true"></span>
+              </div>
+              <div class="process-step__body">
+                <h3>Я составляю персональную программу питания</h3>
+              </div>
+            </li>
+            <li class="process-step">
+              <div class="process-step__marker">
+                <span class="service-mark">Шаг 3</span>
+              </div>
+              <div class="process-step__body">
+                <h3>Индивидуальное сопровождение на протяжении прохождения программы питания</h3>
+                <ul>
+                  <li>Отвечаю на вопросы.</li>
+                  <li>Даю рекомендации.</li>
+                  <li>Поддерживаю на протяжении всей работы.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
         </div>
-        <ol class="process-list">
-          <li class="process-step">
-            <div class="process-marker">
-              <span>Шаг 1</span>
-              <i></i>
-            </div>
-            <div class="process-body">
-              <h3>Заполняете подробную анкету</h3>
-              <p>Рассказываете об образе жизни, режиме дня, привычках, предпочтениях и целях.</p>
-            </div>
-          </li>
-          <li class="process-step">
-            <div class="process-marker">
-              <span>Шаг 2</span>
-              <i></i>
-            </div>
-            <div class="process-body">
-              <h3>Я составляю персональную программу питания</h3>
-            </div>
-          </li>
-          <li class="process-step">
-            <div class="process-marker">
-              <span>Шаг 3</span>
-              <i></i>
-            </div>
-            <div class="process-body">
-              <h3>Индивидуальное сопровождение на протяжении прохождения программы питания</h3>
-              <ul>
-                <li>Отвечаю на вопросы.</li>
-                <li>Даю рекомендации.</li>
-                <li>Поддерживаю на протяжении всей работы.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
+
+        <!-- Позднее заменить на <img alt="..."> -->
+        <div class="image-placeholder process-image" data-image-id="image-03" aria-hidden="true">
+          <div class="image-placeholder__grid"></div>
+          <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 03</span>
+          <span class="image-placeholder__description">
+            Заполнение персонального документа или работа специалиста с программой
+          </span>
+        </div>
       </div>
     </section>
 
-    <!-- Блок 6 -->
-    <section class="section section-program" id="program">
+    <!-- 6. Визуальная пауза -->
+    <section class="section section-break" aria-label="Визуальная пауза">
+      <!-- Позднее заменить на <img alt="..."> -->
+      <div class="image-placeholder break-image" data-image-id="image-04" aria-hidden="true">
+        <div class="image-placeholder__grid"></div>
+        <div class="break-image__marks">
+          <span class="technical-label">VEC-04</span>
+          <span class="technical-label">PRECISION WORK</span>
+        </div>
+        <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 04</span>
+        <span class="image-placeholder__description">
+          Точная работа с механизмом: инструмент, деталь и следы человеческого присутствия
+        </span>
+      </div>
+    </section>
+
+    <!-- 7. Программа -->
+    <section class="section section-program" id="program" aria-labelledby="program-title">
       <div class="container">
         <div class="section-head">
           <p class="section-index">05</p>
-          <h2 class="section-title">Как выглядит персональная программа</h2>
-          <p class="section-lead">Готовый рабочий инструмент — не абстрактные советы, а конкретный документ для ежедневного использования.</p>
+          <h2 class="section-title" id="program-title">Как выглядит персональная программа</h2>
         </div>
 
         <div class="program-showcase">
-          <article class="doc doc-menu">
-            <header class="doc-header">
-              <span class="doc-brand">Вектор</span>
-              <span class="doc-meta">Меню · неделя 1</span>
+          <article class="document-card document-card--offset-a">
+            <header class="document-card__header">
+              <span class="document-card__brand">Вектор</span>
+              <span class="document-card__meta">DOC · 01</span>
             </header>
-            <div class="doc-body">
-              <div class="doc-row">
+            <div class="document-card__body">
+              <p class="document-card__label">Меню · неделя 1</p>
+              <div class="document-card__row">
                 <span>Завтрак</span>
                 <span>Овсянка на воде, яйца, овощи</span>
               </div>
-              <div class="doc-row">
+              <div class="document-card__row">
                 <span>Обед</span>
                 <span>Индейка, гречка, салат</span>
               </div>
-              <div class="doc-row">
+              <div class="document-card__row">
                 <span>Ужин</span>
                 <span>Рыба, овощи на пару</span>
               </div>
-              <div class="doc-row muted">
+              <div class="document-card__row document-card__row--muted">
                 <span>Перекус</span>
                 <span>Творог / орехи</span>
               </div>
             </div>
-            <footer class="doc-footer">Пример меню</footer>
+            <footer class="document-card__footer">
+              <span>Пример меню</span>
+              <span>стр. 01</span>
+            </footer>
           </article>
 
-          <article class="doc doc-tips">
-            <header class="doc-header">
-              <span class="doc-brand">Вектор</span>
-              <span class="doc-meta">Рекомендации</span>
+          <article class="document-card document-card--offset-b">
+            <header class="document-card__header">
+              <span class="document-card__brand">Вектор</span>
+              <span class="document-card__meta">DOC · 02</span>
             </header>
-            <div class="doc-body">
-              <p class="doc-note">Интервал между приёмами пищи — 3–4 часа.</p>
-              <p class="doc-note">Вода — приоритет в первой половине дня.</p>
-              <p class="doc-note">Ужин — за 2–3 часа до сна.</p>
+            <div class="document-card__body">
+              <p class="document-card__label">Рекомендации</p>
+              <p class="document-card__note">Интервал между приёмами пищи — 3–4 часа.</p>
+              <p class="document-card__note">Вода — приоритет в первой половине дня.</p>
+              <p class="document-card__note">Ужин — за 2–3 часа до сна.</p>
             </div>
-            <footer class="doc-footer">Рекомендации</footer>
+            <footer class="document-card__footer">
+              <span>Рекомендации</span>
+              <span>стр. 02</span>
+            </footer>
           </article>
 
-          <article class="doc doc-products">
-            <header class="doc-header">
-              <span class="doc-brand">Вектор</span>
-              <span class="doc-meta">Список продуктов</span>
+          <article class="document-card document-card--offset-c">
+            <header class="document-card__header">
+              <span class="document-card__brand">Вектор</span>
+              <span class="document-card__meta">DOC · 03</span>
             </header>
-            <div class="doc-body">
-              <ul class="doc-checklist">
+            <div class="document-card__body">
+              <p class="document-card__label">Список продуктов</p>
+              <ul class="document-card__checklist">
                 <li>Белок: мясо, рыба, яйца, творог</li>
                 <li>Углеводы: крупы, овощи</li>
                 <li>Жиры: масло, орехи, авокадо</li>
                 <li>Напитки: вода, чай без сахара</li>
               </ul>
             </div>
-            <footer class="doc-footer">Список продуктов</footer>
+            <footer class="document-card__footer">
+              <span>Список продуктов</span>
+              <span>стр. 03</span>
+            </footer>
           </article>
 
-          <article class="doc doc-swap">
-            <header class="doc-header">
-              <span class="doc-brand">Вектор</span>
-              <span class="doc-meta">Замены блюд</span>
+          <article class="document-card document-card--offset-d">
+            <header class="document-card__header">
+              <span class="document-card__brand">Вектор</span>
+              <span class="document-card__meta">DOC · 04</span>
             </header>
-            <div class="doc-body">
-              <div class="swap-row">
+            <div class="document-card__body">
+              <p class="document-card__label">Замены блюд</p>
+              <div class="document-card__swap">
                 <span>Гречка</span>
-                <span class="swap-arrow">→</span>
+                <span class="document-card__arrow" aria-hidden="true">→</span>
                 <span>Рис / киноа</span>
               </div>
-              <div class="swap-row">
+              <div class="document-card__swap">
                 <span>Индейка</span>
-                <span class="swap-arrow">→</span>
+                <span class="document-card__arrow" aria-hidden="true">→</span>
                 <span>Курица / говядина</span>
               </div>
-              <div class="swap-row">
+              <div class="document-card__swap">
                 <span>Творог</span>
-                <span class="swap-arrow">→</span>
+                <span class="document-card__arrow" aria-hidden="true">→</span>
                 <span>Греческий йогурт</span>
               </div>
             </div>
-            <footer class="doc-footer">Варианты замены</footer>
+            <footer class="document-card__footer">
+              <span>Варианты замены</span>
+              <span>стр. 04</span>
+            </footer>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Блок 7 -->
-    <section class="section section-about" id="about">
-      <div class="container narrow">
-        <p class="section-index">06</p>
-        <h2 class="section-title">Обо мне</h2>
-        <p class="about-text">
-          Для меня важно не просто составить программу питания.
-          Важно подобрать питание, которое будет работать именно в вашей жизни.
-        </p>
+    <!-- 8. Обо мне -->
+    <section class="section section-about" id="about" aria-labelledby="about-title">
+      <div class="container about__layout">
+        <!-- Позднее заменить на <img alt="Портрет автора или работа за столом"> -->
+        <div class="image-placeholder about-image" data-image-id="image-05" aria-hidden="true">
+          <div class="image-placeholder__grid"></div>
+          <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 05</span>
+          <span class="image-placeholder__description">
+            Портрет автора в рабочей обстановке, без постановочной фитнес-эстетики
+          </span>
+        </div>
+        <div class="about__copy">
+          <p class="section-index">06</p>
+          <h2 class="section-title" id="about-title">Обо мне</h2>
+          <p class="about__text">
+            Для меня важно не просто составить программу питания.
+            Важно подобрать питание, которое будет работать именно в вашей жизни.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Финальный блок -->
-    <section class="section section-final" id="final">
-      <div class="final-bg" aria-hidden="true"></div>
-      <div class="container narrow final-inner">
-        <p class="section-index light">07</p>
-        <h2 class="section-title light">Регулярное обслуживание всегда обходится дешевле ремонта.</h2>
-        <p class="final-text">
-          Персональная программа питания поможет выстроить систему, которая станет естественной частью вашей жизни.
-        </p>
-        <p class="final-text">
-          Следующий шаг — ознакомиться с условиями программы и заполнить анкету.
-        </p>
-        <a href="#top" class="btn btn-primary btn-final">Перейти к оформлению программы</a>
+    <!-- 9. Финальный блок -->
+    <section class="section section-final" id="final" aria-labelledby="final-title">
+      <div class="container final__layout">
+        <div class="final__content">
+          <p class="section-index">07</p>
+          <h2 class="section-title section-title--final" id="final-title">
+            Регулярное обслуживание всегда обходится дешевле ремонта.
+          </h2>
+          <p class="final__text">
+            Персональная программа питания поможет выстроить систему, которая станет естественной частью вашей жизни.
+          </p>
+          <p class="final__text">
+            Следующий шаг — ознакомиться с условиями программы и заполнить анкету.
+          </p>
+          <a href="#top" class="btn btn-primary">Перейти к оформлению программы</a>
+        </div>
+
+        <!-- Позднее заменить на <img alt="..."> -->
+        <div class="image-placeholder final-image" data-image-id="image-06" aria-hidden="true">
+          <div class="image-placeholder__grid"></div>
+          <span class="technical-label final-image__mark">VEC-06 · COMPLETE</span>
+          <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 06</span>
+          <span class="image-placeholder__description">
+            Завершённое обслуживание: спокойный, собранный и исправный механизм
+          </span>
+        </div>
       </div>
     </section>
   </main>
@@ -339,5 +429,7 @@
       <p>Персональная система питания для мужчин</p>
     </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
