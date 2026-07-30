@@ -198,6 +198,67 @@ button {
   z-index: 2;
 }
 
+.shiny-text {
+  --shiny-color: #b5b5b5;
+  --shiny-shine: #ffffff;
+  --shiny-spread: 120deg;
+  --shiny-speed: 2s;
+  --shiny-delay: 0s;
+
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(
+    var(--shiny-spread),
+    var(--shiny-color) 0%,
+    var(--shiny-color) 35%,
+    var(--shiny-shine) 50%,
+    var(--shiny-color) 65%,
+    var(--shiny-color) 100%
+  );
+  background-size: 200% auto;
+  background-position: 150% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-text-sweep var(--shiny-speed) linear infinite;
+  animation-delay: var(--shiny-delay);
+}
+
+.shiny-text[data-direction="right"] {
+  animation-name: shiny-text-sweep-right;
+}
+
+.shiny-text.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes shiny-text-sweep {
+  from {
+    background-position: 150% center;
+  }
+  to {
+    background-position: -50% center;
+  }
+}
+
+@keyframes shiny-text-sweep-right {
+  from {
+    background-position: -50% center;
+  }
+  to {
+    background-position: 150% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text {
+    animation: none;
+    background-image: none;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
