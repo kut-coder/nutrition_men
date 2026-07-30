@@ -42,36 +42,52 @@
 
   <main id="top">
     <!-- 1. Первый экран -->
-    <section class="section hero" aria-labelledby="hero-title">
-      <div class="container hero__grid">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img src="first.png" alt="" width="1920" height="1080">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__frame">
+        <span class="hero__cross hero__cross--tl" aria-hidden="true"></span>
+        <span class="hero__cross hero__cross--tr" aria-hidden="true"></span>
+        <span class="hero__cross hero__cross--bl" aria-hidden="true"></span>
+        <span class="hero__cross hero__cross--br" aria-hidden="true"></span>
+
+        <div class="hero__top">
+          <div class="hero__top-left">
+            <span class="hero__meta">VEC-01 · ПЕРСОНАЛЬНАЯ СИСТЕМА</span>
+            <span class="hero__rule hero__rule--top" aria-hidden="true"></span>
+          </div>
+          <div class="hero__top-right">
+            <ul class="hero__meta-list">
+              <li>РЕГУЛЯРНОЕ ОБСЛУЖИВАНИЕ</li>
+              <li>СТАБИЛЬНАЯ РАБОТА</li>
+              <li>ДОЛГОСРОЧНЫЙ РЕЗУЛЬТАТ</li>
+            </ul>
+            <span class="hero__rule hero__rule--side" aria-hidden="true"></span>
+          </div>
+        </div>
+
         <div class="hero__content">
-          <p class="technical-label" aria-hidden="true">VEC-01 - ПЕРСОНАЛЬНАЯ СИСТЕМА</p>
           <h1 class="hero__title" id="hero-title">
-            Организм работает для вас каждый день.<br>
-            Позаботьтесь о его обслуживании так же, как заботитесь о своем автомобиле.
+            Твоя система<br>
+            работает лучше,<br>
+            когда она настроена
           </h1>
           <p class="hero__subtitle">
-            Персональная система питания для стабильной работы организма - поддержит энергию, поможет двигаться к комфортному весу и станет естественной частью вашей жизни.
+            Персональная система питания для стабильной работы организма — поддержит энергию, поможет двигаться к комфортному весу и станет естественной частью вашей жизни.
           </p>
-          <a href="#final" class="btn btn-primary">
-            <span>Получить персональный план питания</span>
-            <span class="btn__arrow" aria-hidden="true"></span>
+          <a href="#final" class="hero__cta">
+            <span>ПОЛУЧИТЬ ПЕРСОНАЛЬНЫЙ ПЛАН ПИТАНИЯ</span>
+            <span class="hero__cta-arrow" aria-hidden="true"></span>
           </a>
         </div>
 
-        <div class="hero__media">
-          <!-- Позднее заменить на <img alt="..."> -->
-          <div class="image-placeholder hero-image" data-image-id="image-01" aria-hidden="true">
-            <div class="image-placeholder__grid"></div>
-            <span class="image-placeholder__index">ИЗОБРАЖЕНИЕ 01</span>
-            <span class="image-placeholder__description">
-              Крупный фрагмент сложного механизма и рука специалиста во время обслуживания
-            </span>
-          </div>
-
-          <div class="hero__marks" aria-hidden="true">
-            <span class="technical-label">РЕГУЛЯРНОЕ ОБСЛУЖИВАНИЕ</span>
-            <span class="technical-line technical-line--h"></span>
+        <div class="hero__bottom">
+          <div class="hero__brand">
+            <span class="hero__brand-rule" aria-hidden="true"></span>
+            <span class="hero__brand-name">ВЕКТОР</span>
           </div>
         </div>
       </div>
