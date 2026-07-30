@@ -7,7 +7,7 @@
   <meta name="description" content="Персональная система питания для стабильной работы организма. Регулярное обслуживание - естественная часть вашей жизни.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -83,21 +83,70 @@
 
     <!-- 2. Исправная система -->
     <section class="section section-insight" id="insight" aria-labelledby="insight-title">
-      <div class="container">
-        <div class="insight__frame" aria-hidden="true">
-          <span class="section-index">01</span>
+      <div class="container insight">
+        <div class="insight__top">
+          <p class="insight__eyebrow">02&nbsp;&nbsp;|&nbsp;&nbsp;ПЛАНОВОЕ ОБСЛУЖИВАНИЕ</p>
+          <span class="insight__plus" aria-hidden="true"></span>
         </div>
-        <h2 class="section-title" id="insight-title">Исправная система требует регулярного обслуживания</h2>
-        <div class="insight__text">
-          <p>Мы обслуживаем автомобиль.</p>
-          <p>Следим за домом.</p>
-          <p>Решаем рабочие вопросы.</p>
-          <p>Заботимся о семье.</p>
-          <p class="insight__pause">
-            <span class="service-mark" aria-hidden="true"></span>
-            Но собственный организм часто оказывается в конце списка.
-          </p>
-          <p class="insight__closing">Пока не начинает напоминать о себе усталостью, нехваткой энергии или изменениями в самочувствии.</p>
+
+        <div class="insight__grid">
+          <div class="insight__left">
+            <div class="insight__rail" aria-hidden="true"></div>
+
+            <h2 class="insight__title" id="insight-title">
+              Исправная система<br>
+              требует регулярного<br>
+              обслуживания
+            </h2>
+
+            <div class="insight__stack">
+              <div class="insight__list">
+                <p>Мы обслуживаем автомобиль.</p>
+                <p>Следим за домом.</p>
+                <p>Решаем рабочие вопросы.</p>
+                <p>Заботимся о семье.</p>
+              </div>
+
+              <p class="insight__pause">
+                <span class="insight__pin" aria-hidden="true"></span>
+                Но собственный организм<br>
+                часто оказывается в конце списка.
+              </p>
+
+              <p class="insight__closing">
+                Пока не начинает напоминать о себе<br>
+                усталостью, нехваткой энергии<br>
+                или изменениями в самочувствии.
+              </p>
+            </div>
+
+            <div class="insight__note" aria-hidden="true">
+              <span class="insight__note-mark"></span>
+              <span>VEC-02&nbsp;&nbsp;|&nbsp;&nbsp;SERVICE NOTE</span>
+            </div>
+          </div>
+
+          <div class="insight__right">
+            <article class="svc-card svc-card--mute">
+              <div class="svc-card__left">
+                <p class="svc-card__title">СЛЕДУЮЩЕЕ ОБСЛУЖИВАНИЕ<br>АВТОМОБИЛЯ</p>
+                <p class="svc-card__meta">ИНТЕРВАЛ</p>
+              </div>
+              <p class="svc-card__figure">10 000 KM</p>
+              <span class="svc-card__target" aria-hidden="true"></span>
+            </article>
+
+            <div class="insight__split" aria-hidden="true"></div>
+
+            <article class="svc-card svc-card--alert">
+              <div class="svc-card__left">
+                <p class="svc-card__title">СЛЕДУЮЩЕЕ ОБСЛУЖИВАНИЕ<br>ОРГАНИЗМА</p>
+                <p class="svc-card__meta">ИНТЕРВАЛ</p>
+              </div>
+              <p class="svc-card__figure">?</p>
+              <span class="svc-card__target" aria-hidden="true"></span>
+            </article>
+          </div>
         </div>
       </div>
     </section>
