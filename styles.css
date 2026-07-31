@@ -262,14 +262,13 @@ button {
 .nav {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.2rem;
 }
 
 .nav__link {
   position: relative;
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.4rem;
+  align-items: center;
   padding: 0.55rem 0.7rem;
   font-family: var(--font-body);
   text-transform: uppercase;
@@ -291,16 +290,6 @@ button {
   transition: transform 0.4s var(--ease);
 }
 
-.nav__index {
-  font-family: "Bodoni Moda", var(--font-display), Georgia, serif;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  opacity: 0.55;
-  transition: opacity 0.35s var(--ease), color 0.35s var(--ease);
-}
-
 .nav__label {
   font-size: 0.72rem;
   font-weight: 500;
@@ -311,12 +300,6 @@ button {
 .nav__link:hover,
 .nav__link:focus-visible {
   color: #fff;
-}
-
-.nav__link:hover .nav__index,
-.nav__link:focus-visible .nav__index {
-  opacity: 1;
-  color: var(--type-accent);
 }
 
 .nav__link:hover::after,
@@ -2083,10 +2066,6 @@ button {
   .nav__link {
     gap: 0.75rem;
     padding: 0.85rem 1.1rem;
-  }
-
-  .nav__index {
-    font-size: 0.95rem;
   }
 
   .nav__label {
